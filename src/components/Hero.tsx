@@ -30,15 +30,6 @@ export const Hero: React.FC = () => {
 
       <div className="container hero-container">
         <div className="hero-content">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="hero-badge"
-          >
-            <span className="hero-badge-dot"></span>
-            <span>Global IT Freelancing Agency</span>
-          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
