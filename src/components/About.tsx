@@ -130,7 +130,7 @@ export const About: React.FC = () => {
               whileHover={{ y: -5 }}
               className="stat-card glass-panel"
             >
-              <AnimatedCounter value={250} suffix="+" />
+              <AnimatedCounter value={15} suffix="+" />
               <span className="stat-label">Projects Completed</span>
             </motion.div>
 
@@ -138,7 +138,7 @@ export const About: React.FC = () => {
               whileHover={{ y: -5 }}
               className="stat-card glass-panel"
             >
-              <AnimatedCounter value={120} suffix="+" />
+              <AnimatedCounter value={20} suffix="+" />
               <span className="stat-label">Happy Clients</span>
             </motion.div>
 
@@ -146,7 +146,7 @@ export const About: React.FC = () => {
               whileHover={{ y: -5 }}
               className="stat-card glass-panel"
             >
-              <AnimatedCounter value={24} suffix="+" />
+              <AnimatedCounter value={12} suffix="+" />
               <span className="stat-label">Technologies Mastered</span>
             </motion.div>
 
@@ -154,7 +154,7 @@ export const About: React.FC = () => {
               whileHover={{ y: -5 }}
               className="stat-card glass-panel"
             >
-              <AnimatedCounter value={8} suffix="+" />
+              <AnimatedCounter value={2} suffix="+" />
               <span className="stat-label">Years of Expertise</span>
             </motion.div>
           </div>
@@ -164,7 +164,7 @@ export const About: React.FC = () => {
             <p className="side-visual-quote">
               "Quality is not an act, it is a habit. We refine every line of code to ensure your system performs flawlessly under load."
             </p>
-            <span className="side-visual-author">— Zyroxx Tech Lead</span>
+            <span className="side-visual-author">— Zyroxx</span>
           </div>
 
           <div className="engineering-monitor-card glass-panel">

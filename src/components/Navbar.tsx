@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 export const Navbar: React.FC = () => {
@@ -13,9 +13,9 @@ export const Navbar: React.FC = () => {
     { id: 'services', label: 'Services' },
     { id: 'portfolio', label: 'Portfolio' },
     { id: 'why-us', label: 'Why Us' },
-    { id: 'pricing', label: 'Pricing' },
-    { id: 'faq', label: 'FAQ' },
-    { id: 'contact', label: 'Contact' },
+    // { id: 'pricing', label: 'Pricing' },
+    // { id: 'faq', label: 'FAQ' },
+    // { id: 'contact', label: 'Contact' },
   ];
 
   useEffect(() => {
@@ -88,11 +88,7 @@ export const Navbar: React.FC = () => {
           ))}
         </ul>
 
-        <div className="navbar-cta-wrapper">
-          <a href="#contact" className="btn btn-primary btn-navbar" onClick={(e) => handleNavClick(e, 'contact')}>
-            Get Started <ArrowRight size={16} />
-          </a>
-        </div>
+
 
         {/* Mobile Hamburger Toggle */}
         <button 
@@ -118,11 +114,7 @@ export const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li className="navbar-mobile-item-btn">
-            <a href="#contact" className="btn btn-primary" style={{ width: '100%' }} onClick={(e) => handleNavClick(e, 'contact')}>
-              Get Started <ArrowRight size={16} />
-            </a>
-          </li>
+
         </ul>
       </div>
     </nav>

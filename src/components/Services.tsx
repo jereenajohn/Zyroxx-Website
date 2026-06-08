@@ -241,7 +241,7 @@ export const Services: React.FC = () => {
                 <button className="btn btn-secondary" onClick={() => setActiveService(null)}>
                   Close
                 </button>
-                <a href="#contact" className="btn btn-primary" onClick={() => {
+                {/* <a href="#contact" className="btn btn-primary" onClick={() => {
                   setActiveService(null);
                   const element = document.getElementById('contact');
                   if (element) {
@@ -252,7 +252,7 @@ export const Services: React.FC = () => {
                   }
                 }}>
                   Request Inquiry
-                </a>
+                </a> */}
               </div>
             </motion.div>
           </motion.div>

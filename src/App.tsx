@@ -11,12 +11,12 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Technologies from './components/Technologies';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Workflow from './components/Workflow';
-import Pricing from './components/Pricing';
+// import Pricing from './components/Pricing';
 // import Team from './components/Team';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
+// import FAQ from './components/FAQ';
+// import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingContact from './components/FloatingContact';
@@ -48,13 +48,13 @@ export const App: React.FC = () => {
             <Services />
             <Portfolio />
             <Technologies />
-            <WhyChooseUs />
             <Workflow />
-            <Pricing />
+            <WhyChooseUs />
+            {/* <Pricing /> */}
             {/* <Team /> */}
-            <Testimonials />
-            <FAQ />
-            <Contact />
+            {/* <Testimonials /> */}
+            {/* <FAQ /> */}
+            {/* <Contact /> */}
           </main>
 
           {/* Footer */}

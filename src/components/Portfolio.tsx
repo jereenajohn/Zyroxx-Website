@@ -1,96 +1,120 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers, Eye, Smartphone, Monitor, ShoppingBag, Palette, Layout } from 'lucide-react';
+import CludDemoModal from './CludDemoModal';
+import QrDemoModal from './QrDemoModal';
+import WeddingDemoModal from './WeddingDemoModal';
+import RestaurantDemoModal from './RestaurantDemoModal';
+import ElectrobattlesDemoModal from './ElectrobattlesDemoModal';
+import ChaiDemoModal from './ChaiDemoModal';
+import cludUser4 from '../assets/clud_user4.png';
+import qrMenu1 from '../assets/QR_menu1.png';
+import wedding1 from '../assets/wedding_portfolio1.png';
+import restaurantImg from '../assets/restaurant.png';
+import electroWebsiteImg from '../assets/electrowebsite1.png';
+import chaiImg from '../assets/chai1.png';
 
 interface Project {
   id: number;
   title: string;
-  category: 'mobile' | 'website' | 'ecommerce' | 'uiux' | 'admin';
+  category: 'mobile' | 'website' | 'webapp' | 'portfolio';
   categoryLabel: string;
   tech: string[];
   desc: string;
   previewUrl: string;
+  liveUrl: string;
   colorScheme: string; // gradient values
   deviceType: 'phone' | 'browser';
 }
 
 export const Portfolio: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
+  const [isCludOpen, setIsCludOpen] = useState<boolean>(false);
+  const [isChaiOpen, setIsChaiOpen] = useState<boolean>(false);
+  const [isQrOpen, setIsQrOpen] = useState<boolean>(false);
+  const [isWeddingOpen, setIsWeddingOpen] = useState<boolean>(false);
+  const [isRestOpen, setIsRestOpen] = useState<boolean>(false);
+  const [isEbOpen, setIsEbOpen] = useState<boolean>(false);
 
   const categories = [
     { id: 'all', label: 'All Projects', icon: <Layers size={14} /> },
     { id: 'mobile', label: 'Mobile Apps', icon: <Smartphone size={14} /> },
     { id: 'website', label: 'Websites', icon: <Monitor size={14} /> },
-    { id: 'ecommerce', label: 'E-commerce', icon: <ShoppingBag size={14} /> },
-    { id: 'uiux', label: 'UI/UX', icon: <Palette size={14} /> },
-    { id: 'admin', label: 'Admin Panels', icon: <Layout size={14} /> },
+    { id: 'webapp', label: 'Web Apps', icon: <Layout size={14} /> },
+    { id: 'portfolio', label: 'Portfolios', icon: <Palette size={14} /> },
   ];
 
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Nova Wallet',
-      category: 'mobile',
-      categoryLabel: 'Mobile Apps',
-      tech: ['Flutter', 'Dart', 'Firebase', 'Web3.js'],
-      desc: 'Next-gen decentralized multi-chain crypto wallet with high-speed transaction updates.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #09203f 0%, #537895 100%)',
+      title: 'CLUD',
+      category: 'webapp',
+      categoryLabel: 'Web App',
+      tech: ['Flutter', 'Python', 'Django', 'PostgreSQL'],
+      desc: 'Creative pottery & crochet workshop booking platform with dedicated Admin, Trainer, and User panels.',
+      previewUrl: '#clud-demo',
+      liveUrl: 'https://cludofficial.in',
+      colorScheme: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
       deviceType: 'phone'
     },
     {
       id: 2,
-      title: 'Vertex Analytics',
+      title: 'Chai Tapri',
       category: 'website',
-      categoryLabel: 'Websites',
-      tech: ['React', 'Next.js', 'Chart.js', 'Vercel'],
-      desc: 'Corporate analytics platform featuring real-time charting, ML forecasts, and team sync.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
-      deviceType: 'browser'
+      categoryLabel: 'Website',
+      tech: ['React', 'Next.js', 'Framer Motion', 'Tailwind CSS'],
+      desc: 'Artisanal cafe website presenting dynamic menus, daily specials, and booking systems.',
+      previewUrl: '#chai-demo',
+      liveUrl: 'https://chai-website-omega.vercel.app/',
+      colorScheme: 'linear-gradient(135deg, #78350f 0%, #d97706 100%)',
+      deviceType: 'phone'
     },
     {
       id: 3,
-      title: 'Equinox Fashion',
-      category: 'ecommerce',
-      categoryLabel: 'E-commerce',
-      tech: ['Next.js', 'Stripe API', 'Shopify Commerce', 'GraphQL'],
-      desc: 'Pixel-perfect, high-performance apparel webstore with instant sub-second search and checkout.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #243b55 0%, #141e30 100%)',
-      deviceType: 'browser'
+      title: 'ElectroBattles',
+      category: 'mobile',
+      categoryLabel: 'Mobile App & Website',
+      tech: ['Flutter', 'Python', 'Django', 'Meta API', 'PostgreSQL'],
+      desc: 'Dance studio management app for tracking student attendance, scheduling dance battles, and triggering automated Meta WhatsApp fee reminders.',
+      previewUrl: '#eb-demo',
+      liveUrl: 'https://electrobattles.in',
+      colorScheme: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%)',
+      deviceType: 'phone'
     },
     {
       id: 4,
-      title: 'Apex Design System',
-      category: 'uiux',
-      categoryLabel: 'UI/UX Design',
-      tech: ['Figma', 'Tokens Studio', 'Typography Grid'],
-      desc: 'Comprehensive multi-platform UI library designed for high consistency across products.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #2c3e50 0%, #3498db 100%)',
-      deviceType: 'browser'
+      title: 'QR Menu System',
+      category: 'webapp',
+      categoryLabel: 'Web App',
+      tech: ['React', 'Node.js', 'Socket.io', 'PostgreSQL'],
+      desc: 'Tableside QR-code ordering website for restaurants that routes orders directly to kitchen displays and billing systems.',
+      previewUrl: '#qr-demo',
+      liveUrl: 'https://al-sulthan.vercel.app/',
+      colorScheme: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
+      deviceType: 'phone'
     },
     {
       id: 5,
-      title: 'Aura Cloud Panel',
-      category: 'admin',
-      categoryLabel: 'Admin Panels',
-      tech: ['React', 'Node.js', 'Express', 'PostgreSQL'],
-      desc: 'Internal corporate command console managing remote server node loads and user access logs.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)',
-      deviceType: 'browser'
+      title: 'Wedding Portfolio',
+      category: 'portfolio',
+      categoryLabel: 'Portfolio',
+      tech: ['Lovable'],
+      desc: 'Elegant interactive wedding galleries and event timelines built directly for couples and planning agencies.',
+      previewUrl: '#wedding-demo',
+      liveUrl: 'https://eternal-frames-story.lovable.app/',
+      colorScheme: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)',
+      deviceType: 'phone'
     },
     {
       id: 6,
-      title: 'Vortex Fitness',
-      category: 'mobile',
-      categoryLabel: 'Mobile Apps',
-      tech: ['React Native', 'Expo Go', 'Node.js Backend'],
-      desc: 'Cross-platform mobile application tracking workout sessions, step counts, and macro metrics.',
-      previewUrl: '#',
-      colorScheme: 'linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%)',
+      title: 'Avrum Cafe',
+      category: 'website',
+      categoryLabel: 'Website',
+      tech: ['Lovable'],
+      desc: 'Seamless online food ordering and delivery portal with dynamic cart systems, checkout flows, and dish modifications.',
+      previewUrl: '#rest-demo',
+      liveUrl: 'https://velvet-dine-glow.lovable.app',
+      colorScheme: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
       deviceType: 'phone'
     }
   ];
@@ -163,59 +187,51 @@ export const Portfolio: React.FC = () => {
                 >
                   <div className="preview-glow"></div>
                   
-                  {/* CSS Rendered Mockups */}
-                  {project.deviceType === 'phone' ? (
-                    <div className="mock-phone">
-                      <div className="mock-phone-speaker"></div>
-                      <div className="mock-phone-screen">
-                        <div className="mock-phone-content">
-                          <div className="mock-widget w1"></div>
-                          <div className="mock-widget w2"></div>
-                          <div className="mock-widget w3"></div>
-                        </div>
-                      </div>
-                      <div className="mock-phone-button"></div>
-                    </div>
-                  ) : (
-                    <div className="mock-browser">
-                      <div className="mock-browser-header">
-                        <span className="dot r"></span>
-                        <span className="dot y"></span>
-                        <span className="dot g"></span>
-                        <div className="mock-browser-address">zyroxx-preview.io/{project.id}</div>
-                      </div>
-                      <div className="mock-browser-screen">
-                        <div className="mock-browser-content">
-                          <div className="mock-sidebar"></div>
-                          <div className="mock-main">
-                            <div className="mock-row r1"></div>
-                            <div className="mock-row r2"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  {/* Direct Full-Width Rendered Preview Images */}
+                  {project.title === 'CLUD' ? (
+                    <img src={cludUser4} alt="CLUD Preview" className="project-preview-img" />
+                  ) : project.title === 'Chai Tapri' ? (
+                    <img src={chaiImg} alt="Chai Tapri Preview" className="project-preview-img" />
+                  ) : project.title === 'ElectroBattles' ? (
+                    <img src={electroWebsiteImg} alt="ElectroBattles Preview" className="project-preview-img" />
+                  ) : project.title === 'QR Menu System' ? (
+                    <img src={qrMenu1} alt="QR Menu System Preview" className="project-preview-img" />
+                  ) : project.title === 'Wedding Portfolio' ? (
+                    <img src={wedding1} alt="Wedding Portfolio Preview" className="project-preview-img" />
+                  ) : project.title === 'Avrum Cafe' ? (
+                    <img src={restaurantImg} alt="Avrum Cafe Preview" className="project-preview-img" />
+                  ) : null}
 
                   {/* Overlay on hover */}
                   <div className="project-preview-overlay">
                     <div className="overlay-buttons">
-                      <button 
+                      <a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-primary"
-                        onClick={() => {
-                          const contact = document.getElementById('contact');
-                          if (contact) {
-                            window.scrollTo({
-                              top: contact.offsetTop - 80,
-                              behavior: 'smooth'
-                            });
-                          }
-                        }}
                       >
                         <Eye size={16} /> Preview
-                      </button>
+                      </a>
                       <button 
                         className="btn btn-secondary"
-                        onClick={() => alert(`Details for "${project.title}" mock requested! Our sales representative will showcase this project live during our consultation.`)}
+                        onClick={() => {
+                          if (project.title === 'CLUD') {
+                            setIsCludOpen(true);
+                          } else if (project.title === 'Chai Tapri') {
+                            setIsChaiOpen(true);
+                          } else if (project.title === 'ElectroBattles') {
+                            setIsEbOpen(true);
+                          } else if (project.title === 'QR Menu System') {
+                            setIsQrOpen(true);
+                          } else if (project.title === 'Wedding Portfolio') {
+                            setIsWeddingOpen(true);
+                          } else if (project.title === 'Avrum Cafe') {
+                            setIsRestOpen(true);
+                          } else {
+                            alert(`Details for "${project.title}" mock requested! Our sales representative will showcase this project live during our consultation.`);
+                          }
+                        }}
                       >
                         <ExternalLink size={16} /> Details
                       </button>
@@ -226,7 +242,16 @@ export const Portfolio: React.FC = () => {
                 {/* Card Info */}
                 <div className="project-card-info">
                   <span className="project-card-category">{project.categoryLabel}</span>
-                  <h3 className="project-card-title">{project.title}</h3>
+                  <h3 className="project-card-title">
+                    <a 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-title-link"
+                    >
+                      {project.title} <ExternalLink size={14} style={{ marginLeft: '4px', opacity: 0.7 }} />
+                    </a>
+                  </h3>
                   <p className="project-card-desc">{project.desc}</p>
                   
                   <div className="project-card-tech">
@@ -240,6 +265,48 @@ export const Portfolio: React.FC = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      {/* Interactive CLUD Dashboard Demo Modal */}
+      <AnimatePresence>
+        {isCludOpen && (
+          <CludDemoModal isOpen={isCludOpen} onClose={() => setIsCludOpen(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Interactive QR Menu System Demo Modal */}
+      <AnimatePresence>
+        {isQrOpen && (
+          <QrDemoModal isOpen={isQrOpen} onClose={() => setIsQrOpen(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Interactive Wedding Portfolio Demo Modal */}
+      <AnimatePresence>
+        {isWeddingOpen && (
+          <WeddingDemoModal isOpen={isWeddingOpen} onClose={() => setIsWeddingOpen(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Interactive Restaurant Demo Modal */}
+      <AnimatePresence>
+        {isRestOpen && (
+          <RestaurantDemoModal isOpen={isRestOpen} onClose={() => setIsRestOpen(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Interactive ElectroBattles Demo Modal */}
+      <AnimatePresence>
+        {isEbOpen && (
+          <ElectrobattlesDemoModal isOpen={isEbOpen} onClose={() => setIsEbOpen(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Interactive Chai Cafe Demo Modal */}
+      <AnimatePresence>
+        {isChaiOpen && (
+          <ChaiDemoModal isOpen={isChaiOpen} onClose={() => setIsChaiOpen(false)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code2, Globe2, Layers } from 'lucide-react';
+import { Code2, Globe2, Layers } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 export const Hero: React.FC = () => {
@@ -67,12 +67,6 @@ export const Hero: React.FC = () => {
           >
             <button 
               className="btn btn-primary" 
-              onClick={() => handleScrollTo('contact')}
-            >
-              Get Started <ArrowRight size={18} />
-            </button>
-            <button 
-              className="btn btn-secondary" 
               onClick={() => handleScrollTo('portfolio')}
             >
               View Portfolio

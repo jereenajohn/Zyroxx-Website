@@ -59,8 +59,8 @@ export const Footer: React.FC = () => {
             <li><a href="#about" onClick={(e) => handleScrollTo(e, 'about')}>About Us</a></li>
             <li><a href="#services" onClick={(e) => handleScrollTo(e, 'services')}>Services</a></li>
             <li><a href="#portfolio" onClick={(e) => handleScrollTo(e, 'portfolio')}>Portfolio</a></li>
-            <li><a href="#pricing" onClick={(e) => handleScrollTo(e, 'pricing')}>Pricing</a></li>
-            <li><a href="#faq" onClick={(e) => handleScrollTo(e, 'faq')}>FAQ</a></li>
+            {/* <li><a href="#pricing" onClick={(e) => handleScrollTo(e, 'pricing')}>Pricing</a></li> */}
+            {/* <li><a href="#faq" onClick={(e) => handleScrollTo(e, 'faq')}>FAQ</a></li> */}
           </ul>
         </div>
 
@@ -122,15 +122,6 @@ export const Footer: React.FC = () => {
           <span className="copyright-text">
             © {new Date().getFullYear()} Zyroxx. All rights reserved.
           </span>
-          <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <span className="bullet-sep">•</span>
-            <a href="#">Terms of Service</a>
-            <span className="bullet-sep">•</span>
-            <span className="built-with">
-              Crafted with <Heart size={12} fill="var(--color-primary)" color="var(--color-primary)" /> by Zyroxx team.
-            </span>
-          </div>
         </div>
       </div>
     </footer>
