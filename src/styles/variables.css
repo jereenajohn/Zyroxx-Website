@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --bg-primary: #030712;
+  --bg-secondary: #080f1e;
+  --bg-tertiary: #0f172a;
+  
+  --color-primary: #00f0ff;       /* Cyan Glow */
+  --color-primary-rgb: 0, 240, 255;
+  --color-secondary: #3b82f6;     /* Electric Blue */
+  --color-secondary-rgb: 59, 130, 246;
+  --color-purple: #8b5cf6;        /* Accent Purple */
+  --color-purple-rgb: 139, 92, 246;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Metallic Gradients */
+  --gradient-silver: linear-gradient(135deg, #ffffff 0%, #e2e8f0 40%, #94a3b8 100%);
+  --gradient-cyber: linear-gradient(135deg, #00f0ff 0%, #3b82f6 50%, #8b5cf6 100%);
+  --gradient-bg: radial-gradient(circle at 50% 0%, #0c152b 0%, #030712 100%);
+  
+  /* Borders & Glass */
+  --border-glass: rgba(255, 255, 255, 0.05);
+  --border-glass-glow: rgba(0, 240, 255, 0.15);
+  --bg-glass: rgba(8, 15, 30, 0.6);
+  --bg-glass-hover: rgba(15, 23, 42, 0.8);
+  --shadow-glow: 0 0 25px rgba(0, 240, 255, 0.15);
+  
+  /* Typography */
+  --font-headings: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Container Widths */
+  --container-max-width: 1200px;
+}
