@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Eye, Sparkles, Layout, User, Shield } from 'lucide-react';
+import { X, ZoomIn, Sparkles, User, Shield } from 'lucide-react';
 
 // Import actual screenshots from assets
 import cludUser1 from '../assets/clud_user1.png';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Coffee, Sparkles, Clock, MapPin } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 // Import actual screenshots from assets
 import chai1 from '../assets/chai1.png';

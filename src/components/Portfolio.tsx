@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Layers, Eye, Smartphone, Monitor, ShoppingBag, Palette, Layout } from 'lucide-react';
+import { ExternalLink, Layers, Eye, Smartphone, Monitor, Palette, Layout } from 'lucide-react';
 import CludDemoModal from './CludDemoModal';
 import QrDemoModal from './QrDemoModal';
 import WeddingDemoModal from './WeddingDemoModal';

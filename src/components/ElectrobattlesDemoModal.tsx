@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Zap, Smartphone, Globe, MessageSquare, Compass, Shield } from 'lucide-react';
+import { X, ZoomIn, Smartphone, Globe } from 'lucide-react';
 
 // Import actual screenshots from assets
 import eb1 from '../assets/electrobattles1.png';

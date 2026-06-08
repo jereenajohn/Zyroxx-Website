@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Heart, Sparkles, Image, Compass } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 // Import actual screenshots from assets
 import wedding1 from '../assets/wedding_portfolio1.png';
@@ -155,11 +155,6 @@ const modalContainerStyle: React.CSSProperties = {
   boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
 };
 
-const activeTabStyle: React.CSSProperties = {
-  background: 'rgba(244, 63, 94, 0.15)',
-  color: '#f43f5e',
-  border: '1px solid rgba(244, 63, 94, 0.25)'
-};
 
 const cssStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Outfit:wght@300;400;600;700;800&display=swap');

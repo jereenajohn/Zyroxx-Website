@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Utensils, ShoppingCart, Shield, Sparkles } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 // Import actual screenshots from assets
 import rest0 from '../assets/restaurant.png';

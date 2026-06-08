@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Sparkles, UtensilsCrossed, Calendar, Check } from 'lucide-react';
+import { X, ZoomIn, Sparkles, UtensilsCrossed } from 'lucide-react';
 
 // Import actual screenshots from assets
 import qrMenu1 from '../assets/QR_menu1.png';
