@@ -1,25 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
+import React from 'react';
 import logo from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newsletterEmail.trim() || !newsletterEmail.includes('@')) {
-      setNewsletterStatus('error');
-      return;
-    }
-
-    setNewsletterStatus('loading');
-    setTimeout(() => {
-      setNewsletterStatus('success');
-      setNewsletterEmail('');
-    }, 1200);
-  };
-
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -77,43 +59,6 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Col 4: Newsletter */}
-        <div className="footer-col-newsletter">
-          <h4>Stay Updated</h4>
-          <p>Subscribe to our newsletter to receive tips on digital engineering and cloud scaling.</p>
-          
-          <form className="newsletter-form-box" onSubmit={handleNewsletterSubmit}>
-            <div className="newsletter-input-group">
-              <Mail size={16} className="newsletter-mail-icon" />
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={newsletterEmail}
-                onChange={(e) => {
-                  setNewsletterEmail(e.target.value);
-                  if (newsletterStatus === 'error') setNewsletterStatus('idle');
-                }}
-                disabled={newsletterStatus === 'loading' || newsletterStatus === 'success'}
-              />
-              <button 
-                type="submit" 
-                className="newsletter-submit-btn" 
-                aria-label="Subscribe"
-                disabled={newsletterStatus === 'loading' || newsletterStatus === 'success'}
-              >
-                <ArrowRight size={16} />
-              </button>
-            </div>
-            
-            {/* Status alerts */}
-            {newsletterStatus === 'error' && (
-              <span className="newsletter-msg error">Please enter a valid email.</span>
-            )}
-            {newsletterStatus === 'success' && (
-              <span className="newsletter-msg success">Subscription activated!</span>
-            )}
-          </form>
-        </div>
 
       </div>
 

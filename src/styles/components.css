@@ -2332,7 +2332,7 @@ a.info-link:hover {
   padding-top: 5rem;
   padding-bottom: 4rem;
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
   gap: 4rem;
 }
 
@@ -2532,11 +2532,58 @@ a.info-link:hover {
 
 @media (max-width: 600px) {
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .footer-col-brand {
+    grid-column: span 2 !important;
+    gap: 0.75rem !important;
+  }
+  .footer-logo-img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .footer-logo-text {
+    font-size: 0.95rem !important;
+  }
+  .footer-brand-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+  .footer-brand-tagline {
+    font-size: 0.72rem !important;
+  }
+  .footer-container h4 {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .footer-links-list {
+    gap: 0.5rem !important;
+  }
+  .footer-links-list a {
+    font-size: 0.78rem !important;
   }
   .bottom-bar-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .copyright-text {
+    font-size: 0.75rem !important;
+  }
+  .scroll-to-top-btn {
+    bottom: 15px !important;
+    left: 15px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .scroll-to-top-btn svg {
+    width: 16px !important;
+    height: 16px !important;
   }
 }
 
@@ -2834,4 +2881,302 @@ a.info-link:hover {
 
 .project-card:hover .project-preview-img {
   transform: scale(1.05);
+}
+
+/* ==========================================================================
+   RESPONSIVE PHONES AND TABLETS OVERRIDES (MODALS & FLOATING WHATSAPP)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Modals Layout Responsiveness */
+  .clud-modal-backdrop {
+    padding: 0 !important;
+  }
+  
+  .clud-modal-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+  
+  .clud-header {
+    padding: 1rem 1.25rem !important;
+  }
+  
+  .clud-logo-icon {
+    font-size: 1.6rem !important;
+  }
+  
+  .clud-logo-text {
+    font-size: 1.4rem !important;
+  }
+  
+  .clud-tagline {
+    font-size: 0.75rem !important;
+  }
+  
+  .clud-close-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .clud-content-body {
+    padding: 1.25rem !important;
+  }
+  
+  .portal-intro-box {
+    margin-bottom: 1.25rem !important;
+  }
+  
+  .portal-intro-box h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .portal-intro-box p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .clud-screenshot-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .screenshot-img-container {
+    height: auto !important;
+    aspect-ratio: 16/10 !important;
+  }
+  
+  .screenshot-info {
+    padding: 1rem !important;
+  }
+  
+  .screenshot-info h5 {
+    font-size: 0.95rem !important;
+  }
+  
+  .screenshot-info p {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .clud-portal-selector {
+    padding: 0.25rem !important;
+    gap: 0.25rem !important;
+  }
+  
+  .portal-tab-btn {
+    padding: 0.6rem 0.5rem !important;
+    font-size: 0.8rem !important;
+    border-radius: 8px !important;
+  }
+
+  .portal-tab-btn span {
+    font-size: 0.75rem !important;
+  }
+
+  .clud-lightbox-close {
+    top: -30px !important;
+    right: 5px !important;
+  }
+
+  /* Floating WhatsApp Button Responsiveness */
+  .floating-contact-container {
+    bottom: 15px !important;
+    right: 15px !important;
+    gap: 0.5rem !important;
+  }
+  
+  .floating-contact-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .floating-contact-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .floating-tooltip {
+    display: none !important;
+  }
+
+  /* Hero Section Responsiveness */
+  .hero-logo-card {
+    width: 260px !important;
+    height: 280px !important;
+  }
+  
+  .visual-glow-halo {
+    width: 260px !important;
+    height: 280px !important;
+  }
+  
+  .floating-circle.c1 {
+    width: 285px !important;
+    height: 285px !important;
+  }
+  
+  .floating-circle.c2 {
+    width: 330px !important;
+    height: 330px !important;
+  }
+
+  /* About Section Responsiveness */
+  .about-container {
+    gap: 2rem !important;
+  }
+  
+  .about-description {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .about-mv-container {
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .mv-card {
+    padding: 1.25rem !important;
+  }
+  
+  .why-choose-list {
+    display: none !important;
+  }
+
+  .stats-grid {
+    gap: 1rem !important;
+  }
+  
+  .stat-card {
+    padding: 1.25rem 1rem !important;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem !important;
+  }
+  
+  .engineering-monitor-card {
+    display: none !important;
+  }
+  
+  .stats-side-visual {
+    display: none !important;
+  }
+
+  /* Services Responsiveness (3 items per row on mobile) */
+  .services-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+  
+  .service-card {
+    padding: 0.75rem 0.5rem !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  .service-icon-box {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 6px !important;
+    align-self: center !important;
+  }
+  
+  .service-icon-box svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  .service-title {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.25rem !important;
+    text-align: center !important;
+  }
+  
+  .service-short-desc {
+    font-size: 0.65rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important;
+  }
+  
+  .service-learn-more {
+    font-size: 0.65rem !important;
+    align-self: center !important;
+    gap: 0.2rem !important;
+  }
+
+  .service-learn-more svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  /* Why Choose Us Responsiveness (2 items per row on mobile) */
+  .why-us-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  .why-us-card {
+    padding: 1rem 0.85rem !important;
+  }
+  
+  .why-us-card-header {
+    gap: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .why-us-icon-box {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 6px !important;
+  }
+  
+  .why-us-icon-box svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .why-us-card h3 {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .why-us-card p {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .clud-header {
+    padding: 0.85rem 1rem !important;
+  }
+  
+  .clud-logo-text {
+    font-size: 1.2rem !important;
+  }
+  
+  .clud-tagline {
+    display: none !important;
+  }
+  
+  .portal-tab-btn span {
+    display: none !important;
+  }
+  
+  .portal-tab-btn {
+    padding: 0.5rem !important;
+  }
+
+  /* Stats Grid stacking on small screen sizes to prevent horizontal overflow */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
 }
